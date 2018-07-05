@@ -14,6 +14,7 @@ multiJob('demo') {
     publishers {
       slackNotifier {
         teamDomain('pickoh')
+        baseUrl('https://hooks.slack.com/services/T06GZB2GY/')
         authToken('BBK5DE0HH/aCLerZmLOjHUczI6jEc6RgA0')
         room('tests')
         startNotification(true)
