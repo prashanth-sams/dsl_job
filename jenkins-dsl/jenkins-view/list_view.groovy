@@ -1,4 +1,4 @@
-listView("LIST_VIEW") {
+listView("list_view") {
     description("List of tests with allure report")
     jobs {
         names(
@@ -15,5 +15,6 @@ listView("LIST_VIEW") {
         lastFailure()
         lastDuration()
         buildButton()
+        console()
     }
 }
