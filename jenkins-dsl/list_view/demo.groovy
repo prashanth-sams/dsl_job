@@ -15,7 +15,7 @@ multiJob('demo') {
       slackNotifier {
         teamDomain('pickoh')
         authToken('BBK5DE0HH/aCLerZmLOjHUczI6jEc6RgA0')
-        room('automation_builds')
+        room('tests')
         startNotification(true)
         notifyNotBuilt(false)
         notifyAborted(false)
