@@ -15,6 +15,5 @@ listView("list_view") {
         lastFailure()
         lastDuration()
         buildButton()
-        console()
     }
 }
