@@ -11,25 +11,25 @@ multiJob('demo') {
 
     }
 
-    publishers {
-      slackNotifier {
-        teamDomain('pickoh')
-        authTokenCredentialId('T06GZB2GY')
-        authToken('BBK5DE0HH/aCLerZmLOjHUczI6jEc6RgA0')
-        room('tests')
-        startNotification(true)
-        notifyNotBuilt(false)
+    configure { project ->
+      project / publishers << 'jenkins.plugins.slack.SlackNotifier' {
+        baseUrl("https://hooks.slack.com/services/T06GZB2GY/")
+        room("#tests")
         notifyAborted(false)
         notifyFailure(true)
-        notifySuccess(true)
+        notifyNotBuilt(false)
         notifyUnstable(false)
         notifyBackToNormal(false)
+        notifySuccess(true)
         notifyRepeatedFailure(false)
+        startNotification(true)
         includeTestSummary(false)
         includeCustomMessage(true)
         customMessage("@here Excuse me! I've something for you")
         sendAs(null)
-        commitInfoChoice('NONE')
+        commitInfoChoice("NONE")
+        teamDomain("pickoh")
+        authTokenCredentialId("BBK5DE0HH/aCLerZmLOjHUczI6jEc6RgA0")
+      }
     }
-  }
 }
