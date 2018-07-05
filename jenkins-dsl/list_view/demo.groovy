@@ -29,7 +29,7 @@ multiJob('demo') {
         sendAs(null)
         commitInfoChoice("NONE")
         teamDomain("pickoh")
-        authTokenCredentialId("BBK5DE0HH/aCLerZmLOjHUczI6jEc6RgA0")
+        authToken("BBK5DE0HH/aCLerZmLOjHUczI6jEc6RgA0")
       }
     }
 }
