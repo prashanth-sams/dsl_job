@@ -1,4 +1,4 @@
-buildTrigger = build("manual_parallel")
+buildTrigger = build("pipeline_parallel")
 
 description("multi phase job inside a multi phase job")
 parallel(
