@@ -1,4 +1,4 @@
-multiJob("parallels") {
+multiJob("multiphase_parallel") {
 	description("multi phase job inside a multi phase job")
 
 	concurrentBuild(false)
