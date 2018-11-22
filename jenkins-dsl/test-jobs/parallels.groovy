@@ -5,29 +5,16 @@ multiJob("parallels") {
 	steps {
 		phase("Parallel Test") {
 			phaseJob("allure_behave") {
-				currentJobParameters(true)
-				exposedScm(false)
-				disableJob(false)
-				abortAllJobs(true)
-				killPhaseCondition("FAILURE")
+				killPhaseCondition("NEVER")
 			}
 			phaseJob("allure_behave_new") {
-				currentJobParameters(true)
-				exposedScm(false)
-				disableJob(false)
-				abortAllJobs(true)
-				killPhaseCondition("FAILURE")
+				killPhaseCondition("NEVER")
 			}
 			phaseJob("allure_behave_old") {
-				currentJobParameters(true)
-				exposedScm(false)
-				disableJob(false)
-				abortAllJobs(true)
-				killPhaseCondition("FAILURE")
+				killPhaseCondition("NEVER")
 			}
 			continuationCondition("ALWAYS")
 			executionType("PARALLEL")
 		}
 	}
-	pollSubjobs(false)
 }
