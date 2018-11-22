@@ -1,7 +1,6 @@
 multiJob("multiphase_parallel") {
-	description("multi phase job inside a multi phase job")
+	description("multi phase job")
 
-	concurrentBuild(false)
 	steps {
 		phase("Parallel Test") {
 			phaseJob("allure_behave") {

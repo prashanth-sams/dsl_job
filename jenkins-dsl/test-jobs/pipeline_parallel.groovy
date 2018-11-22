@@ -1,15 +1,22 @@
-buildTrigger = build("pipeline_parallel")
+multiJob("pipeline_parallel") {
+	description("multi phase job inside a multi phase job")
 
-description("multi phase job inside a multi phase job")
-parallel(
-	{
-		parallel(
-			{
-				buildA = build("allure_behave_latest")
-			},
-			{
-				buildB = build("allure_behave_old")
+	steps {
+		phase("Parallel Test") {
+			phaseJob("allure_behave_new") {
+				killPhaseCondition("NEVER")
 			}
-		)
+			phaseJob("allure_behave_old") {
+				killPhaseCondition("NEVER")
+			}
+			phase("Parallel Test 2") {
+				phaseJob("allure_behave") {
+					killPhaseCondition("NEVER")
+				}
+			}
+
+			continuationCondition("ALWAYS")
+			executionType("PARALLEL")
+		}
 	}
-)
+}
