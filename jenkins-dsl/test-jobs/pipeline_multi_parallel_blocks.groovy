@@ -1,4 +1,4 @@
-pipelineJob("pipeline_parallel_pro") {
+pipelineJob("pipeline_multi_parallel_blocks") {
 	description("pipeline job to execute parallel jenkins jobs")
 	keepDependencies(false)
 	definition {
