@@ -14,5 +14,6 @@ job("allure_behave") {
 	steps {
     shell(readFileFromWorkspace('jenkins-dsl/test-jobs/allure_behave.sh'))
 		shell("behave -f allure_behave.formatter:AllureFormatter -o allure-results features/scenarios/login.feature -D browser=chrome -D env=UAT")
+    shell(readFileFromWorkspace('jenkins-dsl/test-jobs/allure_behave_post.sh'))
 	}
 }

@@ -1,4 +1,4 @@
-String jobName = System.getenv('JOB_NAME')
+jobName="allure_behave"
 echo "======================"
-echo jobName
+echo $jobName
 echo "======================"
