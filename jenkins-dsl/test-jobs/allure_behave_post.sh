@@ -1,3 +1,1 @@
-echo "**********************"
-echo $jobName
-echo "**********************"
+echo $JOB_NAME

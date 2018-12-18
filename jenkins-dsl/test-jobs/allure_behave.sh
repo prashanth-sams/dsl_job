@@ -1,4 +1,1 @@
-jobName="allure_behave"
-echo "======================"
-echo $jobName
-echo "======================"
+echo $JOB_NAME
