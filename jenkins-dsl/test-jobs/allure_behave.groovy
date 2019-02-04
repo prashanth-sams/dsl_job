@@ -11,7 +11,7 @@ job("allure_behave") {
 	scm {
 		git {
 			remote {
-				github("prashanth-sams/DanatOnline", "https")
+				url('git@github.com:prashanth-sams/DanatOnline.git')
 			}
 			branch("*/master")
 		}
