@@ -1,6 +1,9 @@
 job("allure_behave") {
 	description("basic test")
 	keepDependencies(false)
+	triggers {
+		githubPush()
+  }
 	scm {
 		git {
 			remote {
