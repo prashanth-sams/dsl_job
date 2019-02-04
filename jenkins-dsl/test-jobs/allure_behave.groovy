@@ -1,6 +1,10 @@
 job("allure_behave") {
 	description("basic test")
 	keepDependencies(false)
+	properties {
+     priority(1)
+     githubProjectUrl('https://github.com/prashanth-sams/DanatOnline/')
+  }
 	triggers {
 		githubPush()
   }
