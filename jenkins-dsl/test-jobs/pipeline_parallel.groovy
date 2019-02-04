@@ -17,6 +17,7 @@ multiJob("pipeline_parallel") {
 			phaseJob("allure_behave") {
 				killPhaseCondition("NEVER")
 			}
+			
 			continuationCondition("ALWAYS")
 			executionType("PARALLEL")
 		}
