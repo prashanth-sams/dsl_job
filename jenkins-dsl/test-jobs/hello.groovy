@@ -1,3 +1,1 @@
-node {
-  echo 'am good'
-}
+echo 'am good'
