@@ -10,8 +10,6 @@ node {
       desktop_build = desktop_job_data.getLastBuild().result.toString()
     }
   } catch(e) {
-    def desktop_job_data = Jenkins.instance.getItemByFullName("allure_behave")
-    desktop_build = desktop_job_data.getLastBuild().result.toString()
     echo e.toString()
   }
   try {
@@ -19,13 +17,8 @@ node {
         build(job: 'allure_behave_latest')
         def mdot_job_data = Jenkins.instance.getItemByFullName("allure_behave_latest")
         mdot_build = mdot_job_data.getLastBuild().result.toString()
-        echo (mdot_job_data.getLastBuild().result.toString())
       }
   } catch(e) {
-      def mdot_job_data = Jenkins.instance.getItemByFullName("allure_behave_latest")
-      mdot_build = mdot_job_data.getLastBuild().result.toString()
-      echo (mdot_job_data.getLastBuild().result.toString())
-      echo (mdot_job_data.getLastBuild().getNumber().toString())
       echo e.toString()
   }
   if(desktop_build == "FAILURE" || mdot_build == "FAILURE") {
