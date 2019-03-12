@@ -2,7 +2,7 @@ pipelineJob('pipe_launch_new') {
     definition {
         cps {
             sandbox()
-            script("
+            script("""
               import jenkins.model.Jenkins
               import hudson.model.*
 
@@ -47,7 +47,7 @@ pipelineJob('pipe_launch_new') {
                         currentBuild.result = 'UNSTABLE'
                     }
                 }
-            ")
+            """)
         }
     }
 }
