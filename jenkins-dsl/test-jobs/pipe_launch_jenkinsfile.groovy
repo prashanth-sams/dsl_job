@@ -1,7 +1,7 @@
 import jenkins.model.Jenkins
 import hudson.model.*
 
-run("pipe_job", "1") {
+run() {
     try {
         stage('allure_behave') {
           build(job: 'allure_behave')
