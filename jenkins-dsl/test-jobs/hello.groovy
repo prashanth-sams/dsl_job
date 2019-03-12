@@ -1,3 +1,5 @@
 node("master") {
-  echo 'am good'
+  stage ('allure_behave') {
+    build(job: 'allure_behave')
+  }
 }
