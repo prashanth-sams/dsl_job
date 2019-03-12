@@ -1,3 +1,3 @@
-job {
+node("master") {
   echo 'am good'
 }
