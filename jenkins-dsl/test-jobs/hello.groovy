@@ -1,1 +1,3 @@
-job(echo 'am good')
+job {
+  echo 'am good'
+}
