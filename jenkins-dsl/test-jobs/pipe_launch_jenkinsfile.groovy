@@ -1,7 +1,7 @@
 import jenkins.model.Jenkins
 import hudson.model.*
 
-use([Ljava.lang.Object;) {
+use([Ljava.lang.Object;]) {
     try {
         stage('allure_behave') {
           build(job: 'allure_behave')
