@@ -3,9 +3,6 @@ pipelineJob('pipe_launch_new') {
         cps {
             sandbox()
             script("""
-              import jenkins.model.Jenkins
-              import hudson.model.*
-
               try {
                   stage('allure_behave') {
                     build(job: 'allure_behave')
