@@ -1,7 +1,7 @@
 pipelineJob('pipe_launch_new') {
     definition {
         cps {
-            script(readFileFromWorkspace('./pipe_launch_jenkinsfile.groovy'))
+            script(readFileFromWorkspace('./jenkins-dsl/test-jobs/pipe_launch_jenkinsfile.groovy'))
             sandbox()
         }
     }
