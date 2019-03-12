@@ -1,7 +1,10 @@
 pipelineJob('pipe_launch_new') {
     definition {
         cps {
-            scriptPath('pipe_launch_jenkinsfile')
+            script(""
+              stage 'allure_behave'
+              echo 'hello'
+            "")
             sandbox()
         }
     }
