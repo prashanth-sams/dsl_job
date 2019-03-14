@@ -35,7 +35,7 @@ pipelineJob('pipe_launch') {
                     currentBuild.result = "UNSTABLE"
                 }
               }
-            """)
+            """).stripIndent()
             sandbox()
         }
     }
