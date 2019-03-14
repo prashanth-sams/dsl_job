@@ -1,4 +1,4 @@
-pipelineJob('pipe_launch_new') {
+pipelineJob('pipe_launch') {
      blockOn(['allure_behave_new', 'allure_behave_latest_2']) {
         blockLevel('GLOBAL')
         scanQueueFor('ALL')
