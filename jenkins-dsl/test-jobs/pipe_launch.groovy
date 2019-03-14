@@ -1,4 +1,8 @@
 pipelineJob('pipe_launch_new') {
+     blockOn(['allure_behave_new', 'allure_behave_latest_2']) {
+        blockLevel('GLOBAL')
+        scanQueueFor('ALL')
+    }
     definition {
         cps {
             script("""
