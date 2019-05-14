@@ -23,9 +23,7 @@ job("allure_behave") {
 		shell("behave -f allure_behave.formatter:AllureFormatter -o allure-results features/scenarios/login.feature -D browser=chrome -D env=UAT")
     shell(readFileFromWorkspace('jenkins-dsl/test-jobs/allure_behave_post.sh'))
 	}
-	publishers {
-		postBuildTask {
-			task('.*',readFileFromWorkspace('jenkins-dsl/test-jobs/update_1.sh'),false,true)
-		}
+	postBuildTask {
+		task('.*',readFileFromWorkspace('jenkins-dsl/test-jobs/update_1.sh'),false,true)
 	}
 }
