@@ -25,7 +25,7 @@ job("allure_behave") {
 	}
 	publishers {
 		postBuildTask {
-			shell(readFileFromWorkspace('jenkins-dsl/test-jobs/update_1.sh'))
+			task('.*',readFileFromWorkspace('jenkins-dsl/test-jobs/update_1.sh'),false,true)
 		}
 	}
 }
